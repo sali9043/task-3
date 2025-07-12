@@ -1,0 +1,149 @@
+shido@blazewolf:~$ git clone https://github.com/sali9043/task-3.git
+Cloning into 'task-3'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (3/3), done.
+shido@blazewolf:~$ cd task-3/
+shido@blazewolf:~/task-3$ git init
+Reinitialized existing Git repository in /home/shido/task-3/.git/
+shido@blazewolf:~/task-3$ git checkout -b develop
+Switched to a new branch 'develop'
+shido@blazewolf:~/task-3$ git checkout -b F1
+Switched to a new branch 'F1'
+shido@blazewolf:~/task-3$ git checkout -b F2
+Switched to a new branch 'F2'
+shido@blazewolf:~/task-3$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+shido@blazewolf:~/task-3$ touch main.txt
+shido@blazewolf:~/task-3$ git add .
+shido@blazewolf:~/task-3$ git commit -m "main.txt main branch"
+[main 701c21c] main.txt main branch
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 main.txt
+shido@blazewolf:~/task-3$ git checkout develop
+Switched to branch 'develop'
+shido@blazewolf:~/task-3$ touch develop.txt
+shido@blazewolf:~/task-3$ git checkout F1
+Switched to branch 'F1'
+shido@blazewolf:~/task-3$ touch F1.txt
+shido@blazewolf:~/task-3$ git checkout F2
+Switched to branch 'F2'
+shido@blazewolf:~/task-3$ touch f2.txt
+shido@blazewolf:~/task-3$ git status
+On branch F2
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        F1.txt
+        develop.txt
+        f2.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+shido@blazewolf:~/task-3$ git checkout F2
+Already on 'F2'
+shido@blazewolf:~/task-3$ git add f2.txt
+shido@blazewolf:~/task-3$ git commit -m "f2 txt file"
+[F2 69bbfb3] f2 txt file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 f2.txt
+shido@blazewolf:~/task-3$ git checkout F1
+Switched to branch 'F1'
+shido@blazewolf:~/task-3$ git status
+On branch F1
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        F1.txt
+        develop.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+shido@blazewolf:~/task-3$ git add F1.txt
+shido@blazewolf:~/task-3$ git commit -m "f1.txt file commit"
+[F1 633315e] f1.txt file commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 F1.txt
+shido@blazewolf:~/task-3$ git checkout develop
+Switched to branch 'develop'
+shido@blazewolf:~/task-3$ git add develop.txt
+shido@blazewolf:~/task-3$ git commit -m "commit develop.txt"
+[develop 99b7ebe] commit develop.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 develop.txt
+shido@blazewolf:~/task-3$ git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+shido@blazewolf:~/task-3$ git push
+Username for 'https://github.com': sali9043
+Password for 'https://sali9043@github.com':
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/sali9043/task-3.git/'
+shido@blazewolf:~/task-3$ git push
+Username for 'https://github.com': git push
+Password for 'https://git%20push@github.com':
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 273 bytes | 273.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/sali9043/task-3.git
+   df3fdd7..701c21c  main -> main
+shido@blazewolf:~/task-3$ git checkout develop
+Switched to branch 'develop'
+shido@blazewolf:~/task-3$ git push origin develop
+Username for 'https://github.com': sali9043
+Password for 'https://sali9043@github.com':
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 273 bytes | 273.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'develop' on GitHub by visiting:
+remote:      https://github.com/sali9043/task-3/pull/new/develop
+remote:
+To https://github.com/sali9043/task-3.git
+ * [new branch]      develop -> develop
+shido@blazewolf:~/task-3$ git checkout F1
+Switched to branch 'F1'
+shido@blazewolf:~/task-3$ git push origin F1
+Username for 'https://github.com': sali9043
+Password for 'https://sali9043@github.com':
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 269 bytes | 134.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'F1' on GitHub by visiting:
+remote:      https://github.com/sali9043/task-3/pull/new/F1
+remote:
+To https://github.com/sali9043/task-3.git
+ * [new branch]      F1 -> F1
+shido@blazewolf:~/task-3$ git checkout F2
+Switched to branch 'F2'
+shido@blazewolf:~/task-3$ git push origin F2
+Username for 'https://github.com': sali9043
+Password for 'https://sali9043@github.com':
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 266 bytes | 266.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'F2' on GitHub by visiting:
+remote:      https://github.com/sali9043/task-3/pull/new/F2
+remote:
+To https://github.com/sali9043/task-3.git
+ * [new branch]      F2 -> F2
+shido@blazewolf:~/task-3$ cd
+shido@blazewolf:~$ cd ..
+shido@blazewolf:/home$ cd shido/
+shido@blazewolf:~$ ls
+task-3
+shido@blazewolf:~$ rm -rf task-3
